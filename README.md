@@ -1,7 +1,7 @@
 # DATAPROJECT4
 
 <p align="center">
-<img src=".images/7017850_orig.jpg" width=400px>
+<img src="images/7017850_orig.jpg" width=400px>
 </p>
 
 En este caso el reto consiste en que afrontéis una competición Kaggle donde vosotros pelearéis por la nota más alta. En este caso vamos a decidir que vuestra capacidad técnica sea la que os evalúe de una manera completamente objetiva.
@@ -44,7 +44,7 @@ En este desafío, los competidores deben predecir la parte del cuerpo a partir d
 Debe haber una columna de predicción por imagen, y las etiquetas se representan como números enteros que corresponden cada uno a una parte del cuerpo contenida en el conjunto de datos:
 
 <p align="center">
-<img src=".images/partes_cuerpo.png" width=300px>
+<img src="images/partes_cuerpo.png" width=300px>
 
 - Abdomen = 0
 
@@ -116,7 +116,7 @@ Para poder trabajar con las imágenes, es necesario convertir los archivos DCIM 
 Algunos ejemplos de las imágenes que se obtienen son:
 
 <p align="center">
-<img src=".images/clases_partes.png" width=300px>
+<img src="images/clases_partes.png" width=300px>
 </p>
 
 ## Entrenamiento del modelo
@@ -126,7 +126,7 @@ Para entrenar el modelo, se ha utilizado la librería fastai, que nos permite en
 También se han usado técnicas de data augmentation ya que, como se puede ver en el siguiente gráfico, existe un gran desbalance entre la clase 3 y el resto de clases. 
 
 <p align="center">
-<img src=".images/clases.png" width=400px>
+<img src="images/clases.png" width=400px>
 </p>
 
 
@@ -135,7 +135,7 @@ También se han usado técnicas de data augmentation ya que, como se puede ver e
 Para encontrar el learning rate óptimo, se ha utilizado la función lr_find() de fastai, que nos permite encontrar el learning rate óptimo para entrenar el modelo. A continuación se muestra la imagen con los 4 learning rates que nos devuelve la función:
 
 <p align="center">
-<img src=".images/lr.png" width=400px>
+<img src="images/lr.png" width=400px>
 </p>
 
 De entre los 4 learning rates, se ha elegido el valley, ya que es el que nos devuelve un compromiso entre la velocidad de aprendizaje y la estabilidad del modelo durante el entrenamiento.
@@ -145,7 +145,7 @@ De entre los 4 learning rates, se ha elegido el valley, ya que es el que nos dev
 Durante las 15 epochs (con batch size = 8) en las que se entrena el modelo, se calcula el train loss y el validation loss. En el siguiente gráfico se puede ver la evolución de ambos para uno de los 3 modelos utilizados en el ensemble:
 
 <p align="center">
-<img src=".images/loss.png" width=400px>
+<img src="images/loss.png" width=400px>
 </p>
 
 
@@ -154,7 +154,7 @@ Durante las 15 epochs (con batch size = 8) en las que se entrena el modelo, se c
 Tras entrenar el modelo, se obtiene la siguiente gráfica con los resultados obtenidos en el conjunto de validación:
 
 <p align="center">
-<img src=".images/resultados.png" width=400px>
+<img src="images/resultados.png" width=400px>
 </p>
 
 
@@ -162,5 +162,5 @@ Tras entrenar el modelo, se obtiene la siguiente gráfica con los resultados obt
 En la siguiente imagen, se resumen los resultados obtenidos para accuracy con todas las pruebas que se han efectuado en este DP:
 
 <p align="center">
-<img src=".images/resultados2.png" width=600px>
+<img src="images/resultados2.png" width=600px>
 </p>
